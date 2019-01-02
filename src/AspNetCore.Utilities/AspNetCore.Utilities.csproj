@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>ICG.AspNetCore.Utilities</PackageId>
-    <Version>1.0.0</Version>
+    <Version>0.0.0</Version>
     <Title>AspNetCore Utilities</Title>
     <Description>A collection of utilities designed to impove the unit-testability or speed development of AspNetCore development projects.</Description>
     <Copyright>Copyright 2019, IowaComputerGurus, Subject to the MIT License</Copyright>
