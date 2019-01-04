@@ -1,9 +1,7 @@
 # aspnetcore.utilities
 | Master | Development |
 | --- | --- |
-] ![Master Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=master) | ![Development Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=development) |
-
-[![Build status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/ICG%20Open%20Source-CI)](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_build/latest?definitionId=37)
+| ![Master Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=master) | ![Development Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=development) |
 
 A collection of helpful utilities for working with ASP.NET Core projects.  These items are used by the IowaComputerGurus Team to aid in unit testing and other common tasks
 
