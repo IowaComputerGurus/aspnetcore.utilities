@@ -1,8 +1,8 @@
 ﻿using System;
-using AspNetCore.Utilities.Url;
+using ICG.AspNetCore.Utilities;
 using Xunit;
 
-namespace AspNetCore.Utilities.Tests.Url
+namespace ICG.AspNetCore.Utilities.Tests
 {
     public class UrlSlugGeneratorTests
     {
