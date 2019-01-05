@@ -13,6 +13,7 @@
     <RepositoryUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities</RepositoryUrl>
     <Authors>MitchelSellers;IowaComputerGurus</Authors>
     <Owners>IowaComputerGurus</Owners>
+    <PackageIconUrl>https://raw.githubusercontent.com/IowaComputerGurus/aspnetcore.utilities/master/icgAppIcon.png</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
