@@ -6,7 +6,7 @@
 | Package | Information |
 | --- |--- |
 | ICG.AspNetCore.Utilities | ![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.svg) |
-| ICG.AspnetCore.Utilities.UnitTesting | ![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.UnitTesting.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.unittesting.svg)|
+| ICG.AspNetCore.Utilities.UnitTesting | ![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.UnitTesting.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.unittesting.svg)|
 
 A collection of helpful utilities for working with ASP.NET Core projects.  These items are used by the IowaComputerGurus Team to aid in unit testing and other common tasks
 
@@ -29,9 +29,9 @@ services.UseIcgAspNetCoreUtilities();
 
 ### Included Features
 
-| Object | Purpose
-|----|---|---
-| ITimeProvider | Provides a shim around the System.DateTime object to allow for unit testing of date operations|
+| Object | Purpose |
+| ---- | --- | --- |
+| ITimeProvider | Provides a shim around the System.DateTime object to allow for unit testing of date operations |
 | IUrlSlugGenerator | Provides a service that will take input and generate a url friendly slug from the content |
 
 Detailed information can be found in the XML Comment documentation for the objects, we are working to add to this document as well.
