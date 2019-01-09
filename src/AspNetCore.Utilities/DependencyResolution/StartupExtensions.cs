@@ -10,6 +10,7 @@ namespace Microsoft.Extensions.DependencyInjection
             //Bind additional services
             services.AddTransient<IUrlSlugGenerator, UrlSlugGenerator>();
             services.AddTransient<ITimeProvider, TimeProvider>();
+            services.AddTransient<ITimeSpanProvider, TimeSpanProvider>();
         }
     }
 }
