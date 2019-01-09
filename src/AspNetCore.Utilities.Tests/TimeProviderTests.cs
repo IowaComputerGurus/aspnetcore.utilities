@@ -80,5 +80,20 @@ namespace ICG.AspNetCore.Utilities.Tests
             //Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void TryParse_ShouldReturnSameAsDateTimeTryParse()
+        {
+            //Arrange
+            var input = "5/1/2009 6:32 PM";
+            var expectedResult = DateTime.TryParse(input, out var expectedOutput);
+
+            //Act
+            var actualResult = _timeProvider.TryParse(input, out var actualOutput);
+
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
     }
 }
