@@ -30,8 +30,9 @@ services.UseIcgAspNetCoreUtilities();
 ### Included Features
 
 | Object | Purpose |
-| ---- | --- | --- |
+| ---- | --- |
 | ITimeProvider | Provides a shim around the System.DateTime object to allow for unit testing of date operations |
+| ITimeSpanProvider | Provides a shim around the System.TimeSpan object to allow for unit testing/injection of TimeSpan operations |
 | IUrlSlugGenerator | Provides a service that will take input and generate a url friendly slug from the content |
 
 Detailed information can be found in the XML Comment documentation for the objects, we are working to add to this document as well.
