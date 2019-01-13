@@ -21,11 +21,7 @@ namespace ICG.AspNetCore.Utilities
     /// </summary>
     public class UrlSlugGenerator : IUrlSlugGenerator
     {
-        /// <summary>
-        /// Generates a URL friendly slug from user supplied content. Keeping only a-z, A-Z, and 0-9, non-matching characters are replaced with dashes, multiple dashes are removed
-        /// </summary>
-        /// <param name="input">The string to generate a slug for</param>
-        /// <returns>A url friendly slug</returns>
+        /// <inheritdoc />
         public string GenerateSlug(string input)
         {
             //Ensure it is valid
