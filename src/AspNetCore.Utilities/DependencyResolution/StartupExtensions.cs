@@ -19,6 +19,8 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddTransient<ITimeSpanProvider, TimeSpanProvider>();
             services.AddTransient<IPathProvider, PathProvider>();
             services.AddTransient<IGuidProvider, GuidProvider>();
+            services.AddTransient<IDatabaseEnvironmentModelFactory, DatabaseEnvironmentModelFactory>();
+            services.AddTransient<ICurrentEnvironmentInfoService, CurrentEnvironmentInfoService>();
         }
     }
 }
