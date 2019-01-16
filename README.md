@@ -3,10 +3,9 @@
 | --- | --- |
 | ![Master Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=master) | ![Development Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=development) |
 
-| Package | Information |
+| NuGet Package | Stats |
 | --- |--- |
 | ICG.AspNetCore.Utilities | ![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.svg) |
-| ICG.AspNetCore.Utilities.UnitTesting | ![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.UnitTesting.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.unittesting.svg)|
 
 A collection of helpful utilities for working with ASP.NET Core projects.  These items are used by the IowaComputerGurus Team to aid in unit testing and other common tasks
 
@@ -38,16 +37,3 @@ services.UseIcgAspNetCoreUtilities();
 | IUrlSlugGenerator | Provides a service that will take input and generate a url friendly slug from the content |
 
 Detailed information can be found in the XML Comment documentation for the objects, we are working to add to this document as well.
-
-## Using ICG.AspNetCore.Utilities.UnitTesting 
-### Installation
-
-Install from NuGet
-
-```
-Install-Package ICG.AspNetCore.Utilities.UnitTesting
-```
-
-### Included Features
-
-Detailed information coming soon.
