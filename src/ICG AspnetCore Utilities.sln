@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Utilities", "Asp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Utilities.Tests", "AspNetCore.Utilities.Tests\AspNetCore.Utilities.Tests.csproj", "{445250BD-291C-421F-AF03-E1EFF9A2E336}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Utilities.UnitTesting", "AspNetCore.Utilities.UnitTesting\AspNetCore.Utilities.UnitTesting.csproj", "{F57917EA-23F2-46AA-AC1D-2C572A04A68B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
