@@ -30,6 +30,7 @@ services.UseIcgAspNetCoreUtilities();
 
 | Object | Purpose |
 | ---- | --- |
+} IDirectory Provider | Provides a shim around the System.IO.Directory object to allow for unit testing. |
 | IGuidProvider | Provides a shim around the System.Guid object to allow for unit testing of Guid operations.  |
 | IFileProvider | Provides a shim around the System.IO.File object to allow for unit testing of file related operations. |
 | IPathProvider | Provides a shim around the System.IO.Path object to allow for unit testing of path related operations | 
