@@ -95,5 +95,19 @@ namespace ICG.AspNetCore.Utilities.Tests
             Assert.Equal(expectedResult, actualResult);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+        [Fact]
+        public void SecondsSinceEpoch_ShouldReturnProperValue()
+        {
+            //Arrange
+            var inputDate = new DateTime(2019, 1, 1, 12, 30, 15);
+            ulong expectedResult = 1546345815; //Validated from: https://www.epochconverter.com/
+
+            //Act
+            var actualResult = _timeProvider.SecondsSinceEpoch(inputDate);
+
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
