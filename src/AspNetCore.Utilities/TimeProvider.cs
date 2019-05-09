@@ -141,6 +141,23 @@ namespace ICG.AspNetCore.Utilities
         /// </returns>
         bool TryParseExact(string s, string[] formats, IFormatProvider provider, DateTimeStyles style,
             out DateTime result);
+
+        /// <summary>
+        ///     Provides the total number of seconds since the Epoch (1/1/1970).  Often used for integration with third-parties
+        /// </summary>
+        /// <param name="input">The date to use for calculation</param>
+        /// <returns>
+        ///     The Total # of Seconds since Epoch, based on the difference between the supplied DateTime and 1/1/1970
+        /// </returns>
+        ulong SecondsSinceEpoch(DateTime input);
+
+        /// <summary>
+        ///     Provides the total number of seconds since the Epoch (1/1/1970).  Often used for integration with third-parties.
+        /// </summary>
+        /// <returns>
+        ///     The Total # of Seconds since Epoch, based on the difference between <see cref="DateTime.UtcNow"/> and 1/1/1970
+        /// </returns>
+        ulong UtcNowSecondsSinceEpoch();
     }
 
     /// <summary>
@@ -182,5 +199,19 @@ namespace ICG.AspNetCore.Utilities
         /// <inheritdoc />
         public bool TryParseExact(string s, string[] formats, IFormatProvider provider,
             DateTimeStyles style, out DateTime result) => DateTime.TryParseExact(s, formats, provider, style, out result);
+
+        /// <inheritdoc />
+        public ulong SecondsSinceEpoch(DateTime input)
+        {
+            var epochStart = new DateTime(1970, 01, 01, 0, 0, 0, 0, DateTimeKind.Utc);
+            var timeSpan = input - epochStart;
+            return Convert.ToUInt64(timeSpan.TotalSeconds);
+        }
+
+        /// <inheritdoc />
+        public ulong UtcNowSecondsSinceEpoch()
+        {
+            return SecondsSinceEpoch(UtcNow);
+        }
     }
 }
