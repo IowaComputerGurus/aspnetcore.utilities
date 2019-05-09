@@ -397,6 +397,7 @@ namespace ICG.AspNetCore.Utilities
         void WriteAllText(string path, string contents, System.Text.Encoding encoding);
     }
 
+    /// <inheritdoc />
     public class FileProvider : IFileProvider
     {
         /// <inheritdoc />
