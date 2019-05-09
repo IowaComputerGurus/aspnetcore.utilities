@@ -10,6 +10,10 @@ namespace ICG.AspNetCore.Utilities
     /// </summary>
     public class ForceNonWwwRewriteRule : IRule
     {
+        /// <summary>
+        /// Runs when applying the rule
+        /// </summary>
+        /// <param name="context"></param>
         public void ApplyRule(RewriteContext context)
         {
             // checking if the hostName has www. at the beginning
