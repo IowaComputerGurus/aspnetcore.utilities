@@ -30,7 +30,9 @@ services.UseIcgAspNetCoreUtilities();
 
 | Object | Purpose |
 | ---- | --- |
+} IDirectory Provider | Provides a shim around the System.IO.Directory object to allow for unit testing. |
 | IGuidProvider | Provides a shim around the System.Guid object to allow for unit testing of Guid operations.  |
+| IFileProvider | Provides a shim around the System.IO.File object to allow for unit testing of file related operations. |
 | IPathProvider | Provides a shim around the System.IO.Path object to allow for unit testing of path related operations | 
 | ITimeProvider | Provides a shim around the System.DateTime object to allow for unit testing of date operations |
 | ITimeSpanProvider | Provides a shim around the System.TimeSpan object to allow for unit testing/injection of TimeSpan operations |
