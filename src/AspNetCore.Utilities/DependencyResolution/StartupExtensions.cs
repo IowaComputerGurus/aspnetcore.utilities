@@ -21,7 +21,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddTransient<IGuidProvider, GuidProvider>();
             services.AddTransient<IDatabaseEnvironmentModelFactory, DatabaseEnvironmentModelFactory>();
             services.AddTransient<ICurrentEnvironmentInfoService, CurrentEnvironmentInfoService>();
-            services.AddTransient<IFileProvider, IFileProvider>();
+            services.AddTransient<IFileProvider, FileProvider>();
             services.AddTransient<IDirectoryProvider, DirectoryProvider>();
         }
     }
