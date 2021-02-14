@@ -8,36 +8,36 @@
         /// <summary>
         ///     US Alaskan Standard Time
         /// </summary>
-        public static string AlaskanStandardTime = "Alaskan Standard Time";
+        public const string AlaskanStandardTime = "Alaskan Standard Time";
 
         /// <summary>
         ///     US Atlantic Standard Time
         /// </summary>
-        public static string AtlanticStandardTime = "Atlantic Standard Time";
+        public const string AtlanticStandardTime = "Atlantic Standard Time";
 
         /// <summary>
         ///     US Central Standard Time
         /// </summary>
-        public static string CentralStandardTime = "Central Standard Time";
+        public const string CentralStandardTime = "Central Standard Time";
 
         /// <summary>
         ///     US Eastern Standard Time
         /// </summary>
-        public static string EasternStandardTime = "Eastern Standard Time";
+        public const string EasternStandardTime = "Eastern Standard Time";
 
         /// <summary>
         ///     US Hawaii-Aleutian Standard Time
         /// </summary>
-        public static string HawaiianStandardTime = "Hawaii-Aleutian Standard Time";
+        public const string HawaiianStandardTime = "Hawaii-Aleutian Standard Time";
 
         /// <summary>
         ///     US Pacific Standard Time
         /// </summary>
-        public static string PacificStandardTime = "Pacific Standard Time";
+        public const string PacificStandardTime = "Pacific Standard Time";
 
         /// <summary>
         ///     US Mountain Standard Time
         /// </summary>
-        public static string MountainStandardTime = "Mountain Standard Time";
+        public const string MountainStandardTime = "Mountain Standard Time";
     }
 }
