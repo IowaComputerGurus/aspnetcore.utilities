@@ -23,7 +23,7 @@ namespace ICG.AspNetCore.Utilities
     /// <inheritdoc />
     public class CurrentEnvironmentInfoService : ICurrentEnvironmentInfoService
     {
-        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly IConfiguration _configuration;
         private readonly IDatabaseEnvironmentModelFactory _databaseEnvironmentModelFactory;
 
@@ -33,7 +33,7 @@ namespace ICG.AspNetCore.Utilities
         /// <param name="hostingEnvironment">The current hosting environment information</param>
         /// <param name="configuration">The current configuration</param>
         /// <param name="databaseEnvironmentModelFactory">Factory to create new objects</param>
-        public CurrentEnvironmentInfoService(IHostingEnvironment hostingEnvironment, IConfiguration configuration, IDatabaseEnvironmentModelFactory databaseEnvironmentModelFactory)
+        public CurrentEnvironmentInfoService(IWebHostEnvironment hostingEnvironment, IConfiguration configuration, IDatabaseEnvironmentModelFactory databaseEnvironmentModelFactory)
         {
             _hostingEnvironment = hostingEnvironment;
             _configuration = configuration;
