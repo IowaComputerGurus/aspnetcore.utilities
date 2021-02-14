@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>ICG.AspNetCore.Utilities</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ApplicationIcon />
