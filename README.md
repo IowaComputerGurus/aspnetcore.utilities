@@ -18,6 +18,7 @@ Install from NuGet
 ```
 Install-Package ICG.AspNetCore.Utilities
 ```
+
 ### Register Dependencies
 
 Inside of of your project's Startus.cs within the RegisterServices method add this line of code.
@@ -26,7 +27,13 @@ Inside of of your project's Startus.cs within the RegisterServices method add th
 services.UseIcgAspNetCoreUtilities();
 ```
 
-### Included Features
+If you desire to use the included Taghelpers inside of your `_viewimports.cshtml` add
+
+```
+@addTagHelper *, ICG.AspNetCore.Utilities
+```
+
+### Included C# Objects
 
 | Object | Purpose |
 | ---- | --- |
@@ -43,3 +50,23 @@ services.UseIcgAspNetCoreUtilities();
 Detailed information can be found in the XML Comment documentation for the objects, we are working to add to this document as well.
 
 **Caution:** As expected the use of both ForceNonWwwRewriteRule and ForceWwwRewriteRule in the same installation will result in broken sites.
+
+### Included Tag Helpers
+
+#### HideCondition 
+This tag helper will hide the content of the target element if the condition is true, an example.
+
+```
+<div hide-condition="Model.Deleted">
+
+</div>
+```
+
+#### Show Condition
+This tag helper will show the content of the target element if the condition is true, an example.
+
+```
+<div show-condition="Model.Published">
+
+</div>
+```
