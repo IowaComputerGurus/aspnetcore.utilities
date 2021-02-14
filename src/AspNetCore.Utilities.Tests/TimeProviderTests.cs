@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using ICG.AspNetCore.Utilities;
 using Xunit;
 
@@ -108,6 +109,44 @@ namespace ICG.AspNetCore.Utilities.Tests
 
             //Assert
             Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void ConvertTimeFromUtc_ShouldThrowException_WhenUnknownTimezoneTarget()
+        {
+            //Arrange
+            var startDate = DateTime.Now;
+            var targetTimezone = "Happy Place";
+
+            //Act.Assert
+            Assert.Throws<TimeZoneNotFoundException>(() => _timeProvider.ConvertTimeFromUtc(targetTimezone, startDate));
+        }
+
+        [Fact]
+        public void ConvertTimeToUtc_ShouldThrowException_WhenUnknownTimezoneTarget()
+        {
+            //Arrange
+            var startDate = DateTime.Now;
+            var targetTimezone = "Happy Place";
+
+            //Act.Assert
+            Assert.Throws<TimeZoneNotFoundException>(() => _timeProvider.ConvertTimeToUtc(targetTimezone, startDate));
+        }
+
+        [Fact]
+        public void ConvertTimes_ShouldSupportConversionBothDirections()
+        {
+            //Arrange
+            var startDate = DateTime.UtcNow;
+            var targetTimezone = Timezones.CentralStandardTime;
+
+            //Act
+            var convertedLocal = _timeProvider.ConvertTimeFromUtc(targetTimezone, startDate);
+            var convertedUtc = _timeProvider.ConvertTimeToUtc(targetTimezone, convertedLocal);
+
+            //Assert
+            Assert.Equal(startDate, convertedUtc);
+
         }
     }
 }
