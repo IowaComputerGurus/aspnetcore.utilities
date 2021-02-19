@@ -3,11 +3,21 @@
   <PropertyGroup>
     <Version>0.0.0</Version>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>ICG.AspNetCore.Utilities</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
   <PropertyGroup>
     <PackageId>ICG.AspNetCore.Utilities</PackageId>
     <Title>AspNetCore Utilities</Title>
     <Description>A collection of utilities designed to impove the unit-testability or speed development of AspNetCore development projects.</Description>
-    <Copyright>Copyright 2019, IowaComputerGurus, Subject to the MIT License</Copyright>
+    <Copyright>Copyright 2021, IowaComputerGurus, Subject to the MIT License</Copyright>
     <PackageProjectUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities</PackageProjectUrl>
     <PackageTags>aspnetcore;utility;unit-testing</PackageTags>
     <RepositoryUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities</RepositoryUrl>
@@ -15,17 +25,22 @@
     <Owners>IowaComputerGurus</Owners>
     <PackageIconUrl>https://raw.githubusercontent.com/IowaComputerGurus/aspnetcore.utilities/master/icgAppIcon.png</PackageIconUrl>
     <IsPackable>True</IsPackable>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>ICG.AspNetCore.Utilities</RootNamespace>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <ApplicationIcon />
-    <OutputType>Library</OutputType>
-    <StartupObject />
+
+  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0-preview7.19362.4" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

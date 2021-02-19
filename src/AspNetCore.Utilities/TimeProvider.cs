@@ -158,6 +158,24 @@ namespace ICG.AspNetCore.Utilities
         ///     The Total # of Seconds since Epoch, based on the difference between <see cref="DateTime.UtcNow"/> and 1/1/1970
         /// </returns>
         ulong UtcNowSecondsSinceEpoch();
+
+        /// <summary>
+        ///     Provides a method to convert a UTC time to a time in the targeted timezone
+        /// </summary>
+        /// <param name="destinationTimeZone">The Timezone Targeted such as "Central Standard Time"</param>
+        /// <param name="utcDateTime">The UTC date to be converted</param>
+        /// <returns>The passed date, adjusted for the target timezone.</returns>
+        /// <exception cref="TimeZoneNotFoundException">Thrown if the requested timezone doesn't exist</exception>
+        DateTime ConvertTimeFromUtc(string destinationTimeZone, DateTime utcDateTime);
+
+        /// <summary>
+        ///     Provides a method to convert time from a local timezone back to UTC
+        /// </summary>
+        /// <param name="currentTimeZone">The current timezone</param>
+        /// <param name="localDateTime">The current time</param>
+        /// <returns>The updated time</returns>
+        /// <exception cref="TimeZoneNotFoundException">Thrown if the requested timezone doesn't exist</exception>
+        DateTime ConvertTimeToUtc(string currentTimeZone, DateTime localDateTime);
     }
 
     /// <summary>
@@ -212,6 +230,20 @@ namespace ICG.AspNetCore.Utilities
         public ulong UtcNowSecondsSinceEpoch()
         {
             return SecondsSinceEpoch(UtcNow);
+        }
+
+        /// <inheritdoc />
+        public DateTime ConvertTimeFromUtc(string destinationTimeZone, DateTime utcDateTime)
+        {
+            var targetTimeZone = TimeZoneInfo.FindSystemTimeZoneById(destinationTimeZone);
+            return TimeZoneInfo.ConvertTimeFromUtc(utcDateTime, targetTimeZone);
+        }
+
+        /// <inheritdoc />
+        public DateTime ConvertTimeToUtc(string currentTimeZone, DateTime localDateTime)
+        {
+            var sourceTimezone = TimeZoneInfo.FindSystemTimeZoneById(currentTimeZone);
+            return TimeZoneInfo.ConvertTimeToUtc(localDateTime, sourceTimezone);
         }
     }
 }

@@ -10,13 +10,13 @@ namespace ICG.AspNetCore.Utilities.Tests
     public class CurrentEnvironmentInfoServicesTests
     {
         private readonly ICurrentEnvironmentInfoService _currentEnvironmentInfoService;
-        private readonly Mock<IHostingEnvironment> _hostingEnvironmentMock;
+        private readonly Mock<IWebHostEnvironment> _hostingEnvironmentMock;
         private readonly Mock<IConfiguration> _configurationMock;
         private readonly Mock<IDatabaseEnvironmentModelFactory> _databaseEnvironmentModelFactoryMock;
 
         public CurrentEnvironmentInfoServicesTests()
         {
-            _hostingEnvironmentMock = new Mock<IHostingEnvironment>();
+            _hostingEnvironmentMock = new Mock<IWebHostEnvironment>();
             _configurationMock = new Mock<IConfiguration>();
             _databaseEnvironmentModelFactoryMock = new Mock<IDatabaseEnvironmentModelFactory>();
             _currentEnvironmentInfoService = new CurrentEnvironmentInfoService(_hostingEnvironmentMock.Object,

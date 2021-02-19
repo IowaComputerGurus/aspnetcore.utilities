@@ -355,7 +355,7 @@ namespace ICG.AspNetCore.Utilities
         DateTime GetLastWriteTimeUtc(string path);
 
         /// <summary>
-        ///     Retrieves the names of the logical drives on this computer in the form "<drive letter>:\".
+        ///     Retrieves the names of the logical drives on this computer in the form "&lt;drive letter&gt;:\".
         /// </summary>
         /// <returns></returns>
         string[] GetLogicalDrives();
@@ -424,6 +424,7 @@ namespace ICG.AspNetCore.Utilities
         void SetLastWriteTimeUtc(string path, DateTime lastWriteTimeUtc);
     }
 
+    /// <inheritdoc />
     public class DirectoryProvider : IDirectoryProvider
     {
         /// <inheritdoc />
