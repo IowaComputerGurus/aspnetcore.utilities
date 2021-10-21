@@ -5,7 +5,7 @@ namespace ICG.AspNetCore.Utilities.TagHelpers
     /// <summary>
     ///     A tag helper that if passed a false value will suppress rendering content
     /// </summary>
-    [HtmlTargetElement(Attributes = nameof(ShowCondition))]
+    [HtmlTargetElement(Attributes = "show-condition")]
     public class ShowConditionTagHelper : TagHelper
     {
         /// <summary>
