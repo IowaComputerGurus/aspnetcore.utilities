@@ -1,7 +1,6 @@
 # aspnetcore.utilities ![](https://img.shields.io/github/license/iowacomputergurus/aspnetcore.utilities.svg)
-| Master | Develop |
-| --- | --- |
-| ![Master Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=master) | ![Development Branch Status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/AspNetCore%20Utilities?branchName=development) |
+
+![Build Status](https://github.com/IowaComputerGurus/aspnetcore.utilities/actions/workflows/ci-build.yml/badge.svg)
 
 ## NuGet Package Information
 ICG.AspNetCore.Utilities ![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.svg)
