@@ -1,16 +1,15 @@
-name: CI Build
+name: Release Build
 
 on:
   push:
-    branches: [ develop ]
-  pull_request:
-    branches: [ develop ]
-  workflow_dispatch:
+    tags: 
+      - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Validate Build
+    name: Build & Publish to NuGet
+    environment: nuget
     env:
       solution-path: './src/ICG AspnetCore Utilities.sln'
     steps:
@@ -38,3 +37,6 @@ jobs:
       run: dotnet build "${{ env.solution-path }}" --no-restore --configuration Release -p:version=${{ steps.gitversion.outputs.majorMinorPatch }}
     - name: Test
       run: dotnet test "${{ env.solution-path }}" --no-build --configuration Release
+    
+    - name: Publish
+      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.ICG_NUGET_API_KEY}}
