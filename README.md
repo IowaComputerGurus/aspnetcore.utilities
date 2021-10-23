@@ -2,8 +2,7 @@
 
 ![Build Status](https://github.com/IowaComputerGurus/aspnetcore.utilities/actions/workflows/ci-build.yml/badge.svg)
 
-## NuGet Package Information
-ICG.AspNetCore.Utilities ![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.svg)
+![](https://img.shields.io/nuget/v/icg.aspnetcore.utilities.svg) ![](https://img.shields.io/nuget/dt/icg.aspnetcore.utilities.svg)
 
 
 A collection of helpful utilities for working with ASP.NET Core projects.  These items are common rules, tag helpers and similar that our team has found valuable.
@@ -27,7 +26,7 @@ Install-Package ICG.AspNetCore.Utilities
 To utilize the tag helpers modify `_viewimports.cshtml` by adding
 
 ```
-@addTagHelper *, ICG.AspNetCore.Utilities
+@addTagHelper *, AspNetCore.Utilities
 ```
 
 **Caution:** As expected the use of both ForceNonWwwRewriteRule and ForceWwwRewriteRule in the same installation will result in broken sites.
