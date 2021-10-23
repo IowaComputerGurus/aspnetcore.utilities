@@ -17,7 +17,7 @@ A number of elements have been moved to the sister netcore project.
 
 Install from NuGet
 
-```
+``` powershell
 Install-Package ICG.AspNetCore.Utilities
 ```
 
@@ -25,7 +25,7 @@ Install-Package ICG.AspNetCore.Utilities
 
 To utilize the tag helpers modify `_viewimports.cshtml` by adding
 
-```
+``` html+razor
 @addTagHelper *, AspNetCore.Utilities
 ```
 
@@ -36,7 +36,7 @@ To utilize the tag helpers modify `_viewimports.cshtml` by adding
 #### HideCondition 
 This tag helper will hide the content of the target element if the condition is true, an example.
 
-```
+``` html
 <div hide-condition="Model.Deleted">
 
 </div>
@@ -45,7 +45,7 @@ This tag helper will hide the content of the target element if the condition is 
 #### Show Condition
 This tag helper will show the content of the target element if the condition is true, an example.
 
-```
+``` html
 <div show-condition="Model.Published">
 
 </div>
