@@ -24,7 +24,7 @@
     <RepositoryUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities</RepositoryUrl>
     <Authors>MitchelSellers;IowaComputerGurus</Authors>
     <Owners>IowaComputerGurus</Owners>
-    <PackageIconUrl>https://raw.githubusercontent.com/IowaComputerGurus/aspnetcore.utilities/master/icgAppIcon.png</PackageIconUrl>
+	<PackageIcon>icgAppIcon.png</PackageIcon>
     <IsPackable>True</IsPackable>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
@@ -36,12 +36,9 @@
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Models\**" />
-    <Content Remove="Models\**" />
-    <EmbeddedResource Remove="Models\**" />
-    <None Remove="Models\**" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="icgAppIcon.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
