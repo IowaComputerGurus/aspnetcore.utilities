@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>ICG.AspNetCore.Utilities</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -14,7 +14,7 @@
     <PackageId>ICG.AspNetCore.Utilities</PackageId>
     <Title>AspNetCore Utilities</Title>
     <Description>A collection of utilities designed to impove the unit-testability or speed development of AspNetCore development projects.</Description>
-    <Copyright>Copyright 2021, IowaComputerGurus, Subject to the MIT License</Copyright>
+    <Copyright>Copyright 2024, IowaComputerGurus, Subject to the MIT License</Copyright>
     <PackageProjectUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities</PackageProjectUrl>
     <PackageTags>aspnetcore;utility;unit-testing</PackageTags>
     <RepositoryUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities</RepositoryUrl>
@@ -37,8 +37,8 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
