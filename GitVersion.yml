@@ -9,11 +9,11 @@ branches:
       when-current-commit-tagged: true
     source-branches: []
   hotfix:
-      regex: hotfix[/-]
-      source-branches: [develop]
-      prevent-increment:
-        when-current-commit-tagged: true
-      is-release-branch: true  
+    regex: hotfix[/-]
+    source-branches: [develop]
+    prevent-increment:
+      when-current-commit-tagged: true
+    is-release-branch: true  
   pull-request:
     regex: (pull|pull\-requests|pr)[/-]
     label: 'pr'
