@@ -95,7 +95,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"IowaComputerGurus_aspnetcore.utilities" /o:"iowacomputergurus-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /n:"AspNetCore Utilities"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"IowaComputerGurus_aspnetcore.utilities" /o:"iowacomputergurus-github" /d:sonar.login="${{ env.SONAR_TOKEN }}" /n:"AspNetCore Utilities"
           dotnet restore "${{ env.solution-path }}"
           dotnet build "${{ env.solution-path }}" --no-restore --configuration Release -p:version=${{ steps.gitversion.outputs.majorMinorPatch }}
           dotnet test "${{ env.solution-path }}" --no-build --configuration Release --collect "XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover --logger "trx;LogFileName=unittests.trx"
