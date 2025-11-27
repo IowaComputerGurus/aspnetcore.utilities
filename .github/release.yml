@@ -13,7 +13,7 @@ changelog:
       labels:
         - bug
         - breaking-change
-    - title: Adminsitrative
+    - title: Administrative
       labels:
         - administrative
         - documentation
