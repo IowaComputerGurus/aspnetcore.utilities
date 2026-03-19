@@ -48,12 +48,6 @@ jobs:
     env:
       solution-path: './src/ICG AspnetCore Utilities.sln'
     steps:
-      - name: Set up JDK 11
-        uses: actions/setup-java@v5
-        with:
-          java-version: 11
-          distribution: zulu
-
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
@@ -97,11 +91,11 @@ jobs:
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.ICG_SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"IowaComputerGurus_aspnetcore.utilities" /o:"iowacomputergurus-github" /d:sonar.login="${{ env.SONAR_TOKEN }}" /n:"AspNetCore Utilities"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"IowaComputerGurus_aspnetcore.utilities" /o:"iowacomputergurus-github" /d:sonar.token="${{ env.SONAR_TOKEN }}" /n:"AspNetCore Utilities"
           dotnet restore "${{ env.solution-path }}"
           dotnet build "${{ env.solution-path }}" --no-restore --configuration Release -p:version=${{ steps.gitversion.outputs.majorMinorPatch }}
           dotnet test "${{ env.solution-path }}" --no-build --configuration Release --collect "XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover --logger "trx;LogFileName=unittests.trx"
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
