@@ -13,6 +13,8 @@
 
 A collection of helpful utilities for working with ASP.NET Core projects.  These items are common rules, tag helpers and similar that our team has found valuable.
 
+Current builds and package development target .NET 10.
+
 ## Breaking Change with 5.1
 
 A number of elements have been moved to the sister netcore project.
